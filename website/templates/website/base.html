@@ -1,0 +1,101 @@
+{% load static %}
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> TOGETHER </title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/website.css' %}">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+    <title>TOGETHER</title>
+    <style type ="text/css">
+    #topMenu {
+      height:10%;
+      width:850px;
+    }
+    #topMenu ul li{
+      list-style: none;
+      color: white;
+      background-color: #2d2d2d;
+      line-height: 50px;
+      float: left;
+      vertical-align: middle;
+      text-align: center;
+    }
+    #topMenu .menuLink{
+      text-decoration: none;
+      color: white;
+      display: block;
+      width: 250px;
+      font-size: 20px;
+      font-weight:bold;
+    }
+    #topMenu .menuLink:hover{
+      color: red;
+      background-color: #4d4d4d;
+    }
+
+    #side_left{
+      display: inline;
+      width:20%;
+      height:80%;
+      background-color:grey;
+      border: 3px solid red;
+      float:left;
+      margin:5px;
+      font-size: 30px;
+
+      }
+      #mid_content{
+        display: inline;
+        text-align: center;
+        width: 75%;
+        height: 80%;
+        background-color: black;
+        border: 3px solid red;
+        float: right;
+        margin: 5px;
+        font-size: 30px;
+        color: white;
+        }
+      #each_content{
+        diplay: inline;
+        text-align: center;
+        width: 90%;
+        height: 80%;
+        background-color: black;
+        border: 3px solid red;
+        float: left;
+        margin: 5px;
+        font-size: 30px;
+        color: white;
+      }
+      </style>
+
+  </head>
+
+  <body>
+
+    <nav id = "topMenu">
+      <ul>
+        <li><a class = "menuLink" href="">TOGETHER</a></li>
+        <li>|</li>
+        <li><a class = "menuLink" href="">스터디 모집</a></li>
+        <li>|</li>
+        <li><a class = "menuLink" href="http://127.0.0.1:8000/">함께 공부해요</a></li>
+      </ul>
+    </nav>
+
+    <div id = "side_left">
+      {%block content%}
+      {%endblock%}
+    </div>
+
+    <div id = 'mid_content'>TOGETHER</div>
+
+
+ </body>
+
+</html>

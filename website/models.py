@@ -1,6 +1,8 @@
 from django.conf import settings
 from django.db import models
+from django.db.models import *
 from django.utils import timezone
+from django.views import View
 
 
 class Post(models.Model):
