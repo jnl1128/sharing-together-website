@@ -1,1 +1,146 @@
-<!--1. 문서 서두에 extends 반드시  해주세요.2. 반드시 메인 페이지 명은 'main', to gather 페이지 명은 'to_gather', be together 페이지 명은 'be_together'로 작성해주세요.3. elements.html 파일을 제작 중에 있는데, to gather, be together 페이지에 대한 db가 필요해 고민 중입니다.   인터넷 뒤지니까 좀 편한 방법이 있긴 한데 적용해도 될지 말지 고민 중이에요   일단 각각 만들어보시고, 제가 본 페이지와 비교하면서 진행 계속 할게요!4. commit에는 각자 한 작업 내용을 반드시 작성해주시고, dev branch에 업로드 해주세요!5. 각 페이지 컨셉에 맞게 수정할 내용은 다음과 같습니다!   div_menu에서 현재 페이지 뷰에 맞게 해당 p에 bold 처리 해주세요   div_contents 중 category, chat_list 작성해주세요. 3번 주석 참고 부탁드립니다6. 잘 부탁드려요 :)-->{% load static %}<html><head>    <meta charset="UTF-8">    <link rel="stylesheet" href="{% static 'css/style.css' %}">    <title>TOGETHER</title></head><body><header>    <div rel="main.html" class="div_logo"> <!--메인 페이지 html 삽입 예정-->        <p>TOGETHER</p> <!--사진으로 대체 가능 -->    </div>    <div class="div_header_bar"> <!--상단바에 대한 class입니다. 로그인 페이지 등 삽입 예정, 일단 비워 놨어요! -->        <p>header bar</p>    </div></header><div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->    <a href="main.html" id="menu_button_together"><p>Together</p><br style="font-size: 10px"></a>    <a href="to_gather.html" id="menu_button_to_gather"><p>To Gather</p><br style="font-size: 10px"></a>    <a href="be_together.html" id="menu_button_be_together"><p>Be Together</p><br style="font-size: 10px"></a></div><div rel="" class="div_contents"> <!--category, chat list 들어갈 예정-->    <div class="category" id="div_contents_category">        <h2>category</h2>        <ol>            <li>카테고리1<br></li>            <li>카테고리2<br></li>            <li>카테고리3<br></li>        </ol>        <!--category 내용 삽입해주세요. 위 내용은 예시입니다. elements.html 이용해주시면 될 거 같아요. -->    </div>    <div class="chat_list" id="div_contents_chat_lists">        <h2>Be Together</h2>        <table style="margin-left: 10px;">            <thead style="margin-left: 20px;">            <tr>                <th>순서</th>                <th>제목</th>                <th>작성자</th>                <th>조회수</th>                <th>참여자수</th>            </tr>            </thead>            <tbody style="text-align: center;">            <tr>                <td style="width: 70px;">1</td>                <td style="width: 500px;">카테고리에 대한 채팅 제목의 예시1입니다.</td>                <td style="width: 130px">choalter</td>                <td style="width: 100px">23652</td>                <td style="width: 100px;">22363</td>            </tr>            <tr>                <td style="width: 70px;">2</td>                <td style="width: 500px;">카테고리에 대한 채팅 제목의 예시2입니다.</td>                <td style="width: 130px">narin</td>                <td style="width: 100px">42321</td>                <td style="width: 100px;">30487</td>            </tr>            <tr>                <td style="width: 70px;">3</td>                <td style="width: 500px;">카테고리에 대한 채팅 제목의 예시3입니다.</td>                <td style="width: 130px">jia</td>                <td style="width: 100px">38272</td>                <td style="width: 100px;">24837</td>            </tr>            </tbody>        </table>        <!--각자 맞게 내용 삽입해주세요. 위 내용은 예시입니다.elements.html 이용해주시면 될 거 같아요.-->    </div></div></body></html>======={% load static %}<html lang="en"><head>    <meta charset="UTF-8">    <title>Chat</title>    <link rel="stylesheet" href="/css/main.css"></head><body><div id="wrapper">    <div id="userWrap">        <nav>            <span>                TOGETHER            </span>        </nav>        <div id="menuList" style= "height:200px; width:200px; float:left;">            <div id="menuHeader">메뉴</div>            <div class="button menuBtn" id="introduceBtn">WHY TOGETHER?</div>            <div class="button menuBtn" id="startBtn"> TO GATHER 시작하기 </div>        </div>        <div id="Content" style ="height:500px; width:600px; float:left; ">          <div class="animated-title">            <div class="text-top">              <div>                <span >To gather?</span>                <span >Be together!</span>              </div>            </div>          </div>          <div class="Context_1">            <span>왜  Together일까요?</span>          </div>          <div class="Context_2">            <span> 이제 우리는 더 똑똑해질 수 있습니다 </span>            <span> 하나의 네트워크 공간 안에서 동일한 시간의 흐름속에 놓인 우리들은 문제점을 공유하고 해결방법을 논의합니다.            </span>            <br> To GATHER            <br> 해결이 안 되는 문제가 있다면 스스로 모임을 구성해보세요. 분명히 나와 같은 고민을 갖고 있는 사람이 있을거에요              <br> Be TOGETHER              <br> 이미 나와 같은 고민을 하고 있었던 사람이 있지 않았을까요? 모임을 찾고 함께 문제에 대해 고민해봐요.          </div>        </div>    </div>  </div></body></html>
+<!--1. 문서 서두에 extends 반드시  해주세요.
+2. 반드시 메인 페이지 명은 'main', to gather 페이지 명은 'to_gather', be together 페이지 명은 'be_together'로 작성해주세요.
+3. elements.html 파일을 제작 중에 있는데, to gather, be together 페이지에 대한 db가 필요해 고민 중입니다.   인터넷 뒤지니까 좀 편한 방법이 있긴 한데 적용해도 될지 말지 고민 중이에요   일단 각각 만들어보시고, 제가 본 페이지와 비교하면서 진행 계속 할게요!4. commit에는 각자 한 작업 내용을 반드시 작성해주시고, dev branch에 업로드 해주세요!5. 각 페이지 컨셉에 맞게 수정할 내용은 다음과 같습니다!
+div_menu에서 현재 페이지 뷰에 맞게 해당 p에 bold 처리 해주세요
+div_contents 중 category, chat_list 작성해주세요.
+3번 주석 참고 부탁드립니다6. 잘 부탁드려요 :)-->
+{% load static %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>TOGETHER</title>
+</head>
+<body>
+<header>
+      <div rel="main.html" class="div_logo"> <!--메인 페이지 html 삽입 예정-->
+        <p>TOGETHER</p> <!--사진으로 대체 가능 -->
+      </div>
+
+      <div class="div_header_bar"> <!--상단바에 대한 class입니다. 로그인 페이지 등 삽입 예정, 일단 비워 놨어요! -->
+        <p>header bar</p>
+      </div>
+    </header>
+
+    <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
+      <a href="main.html" id="menu_button_together">
+        <p>Together</p>
+        <br style="font-size: 10px">
+      </a>
+      <a href="to_gather.html" id="menu_button_to_gather">
+        <p>To Gather</p>
+        <br style="font-size: 10px">
+      </a>
+      <a href="be_together.html" id="menu_button_be_together">
+        <p>Be Together</p>
+        <br style="font-size: 10px"></a>
+      </div>
+
+      <div rel="" class="div_contents"> <!--category, chat list 들어갈 예정-->
+        <div class="category" id="div_contents_category">
+          <h2>category</h2>
+          <ol>
+            <li>
+              {%block category_content%}
+              {%endblock%}
+            </li>
+
+    
+          </ol>        <!--category 내용 삽입해주세요. 위 내용은 예시입니다. elements.html 이용해주시면 될 거 같아요. -->
+        </div>
+
+        <div class="chat_list" id="div_contents_chat_lists">
+          <h2>Be Together</h2>
+          <table style="margin-left: 10px;">
+            <thead style="margin-left: 20px;">
+              <tr>
+                <th>순서</th>
+                <th>제목</th>
+                <th>작성자</th>
+                <th>조회수</th>
+                <th>참여자수</th>
+              </tr>
+            </thead>
+
+            <tbody style="text-align: center;">
+              <tr>
+                <td style="width: 70px;">1</td>
+                <td style="width: 500px;">카테고리에 대한 채팅 제목의 예시1입니다.</td>
+                <td style="width: 130px">choalter</td>
+                <td style="width: 100px">23652</td>
+                <td style="width: 100px;">22363</td>
+              </tr>
+
+              <tr>
+                <td style="width: 70px;">2</td>
+                <td style="width: 500px;">카테고리에 대한 채팅 제목의 예시2입니다.</td>
+                <td style="width: 130px">narin</td>
+                <td style="width: 100px">42321</td>
+                <td style="width: 100px;">30487</td>
+              </tr>
+
+              <tr>
+                 <td style="width: 70px;">3</td>
+                 <td style="width: 500px;">카테고리에 대한 채팅 제목의 예시3입니다.</td>
+                 <td style="width: 130px">jia</td>
+                 <td style="width: 100px">38272</td>
+                 <td style="width: 100px;">24837</td>
+               </tr>
+             </tbody>
+           </table>        <!--각자 맞게 내용 삽입해주세요. 위 내용은 예시입니다.elements.html 이용해주시면 될 거 같아요.-->
+         </div>
+
+</div>
+
+</body>
+     </html>
+
+     ======={% load static %}
+     <html lang="en">
+     <head>
+       <meta charset="UTF-8">
+       <title>Chat</title>
+       <link rel="stylesheet" href="/css/main.css">
+     </head>
+
+     <body>
+<div id="wrapper">
+         <div id="userWrap">
+           <nav>
+             <span>                TOGETHER            </span>
+           </nav>
+
+           <div id="menuList" style= "height:200px; width:200px; float:left;">
+             <div id="menuHeader">메뉴</div>
+             <div class="button menuBtn" id="introduceBtn">WHY TOGETHER?</div>
+             <div class="button menuBtn" id="startBtn"> TO GATHER 시작하기 </div>
+           </div>
+
+           <div id="Content" style ="height:500px; width:600px; float:left; ">
+             <div class="animated-title">
+               <div class="text-top">
+                 <div>
+                   <span >To gather?</span>
+                   <span >Be together!</span>
+                 </div>
+               </div>
+             </div>
+             <div class="Context_1">
+               <span>왜  Together일까요?</span>
+             </div>
+             <div class="Context_2">
+               <span> 이제 우리는 더 똑똑해질 수 있습니다 </span>
+               <span> 하나의 네트워크 공간 안에서 동일한 시간의 흐름속에 놓인 우리들은 문제점을 공유하고 해결방법을 논의합니다.
+               </span>
+               <br> To GATHER
+               <br> 해결이 안 되는 문제가 있다면 스스로 모임을 구성해보세요. 분명히 나와 같은 고민을 갖고 있는 사람이 있을거에요
+               <br> Be TOGETHER
+               <br> 이미 나와 같은 고민을 하고 있었던 사람이 있지 않았을까요? 모임을 찾고 함께 문제에 대해 고민해봐요.
+             </div>
+           </div>
+         </div>
+       </div>
+
+     </body>
+
+     </html>
