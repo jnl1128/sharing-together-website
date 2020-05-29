@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>TOGETHER</title>
+		<meta name="description" content="AOS - Animate On Scroll library using CSS3">
+		<meta name="keywords" content="AOS, animate on scroll, css3 scroll animations, simple scroll animations">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+		<!-- <link rel="stylesheet" href="http://localhost:3002/dist/aos.css" /> -->
+    <link rel="stylesheet" type = text/css href= "css/main.css" />
+
+	</head>
+	<body>
+
+
+
+		<header class="header">
+			<div class="header-center">
+				<h1 class="header_logo" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="400">Why TOGETHER? <span></span></h1>
+			</div>
+			<span class="header_text" data-aos="fade-up" data-aos-easing="ease" data-aos-delay="800">
+				왜 TOGETHER 일까요?<br>
+			</span>
+      <p class="header_scroll"data-aos="fade-down" data-aos-easing="ease" data-aos-delay="1200">       이제 우리는 더 똑똑해질 수 있습니다. </p>
+      <p class="header_scroll" data-aos="fade-down" data-aos-easing="ease" data-aos-delay="1600">      하나의 네트워크 공간 안에서 동일한 시간의 흐름속에 놓인 우리들은 문제점을 공유하고 해결 방법을 논의합니다.</p>
+
+
+			<a href="http://github.com/michalsnik/aos" target="_blank" class="octocat" data-aos="zoom-out" data-aos-delay="1500">
+				<img src="img/github_octocat.png" alt="">
+			</a>
+		</header>
+
+		<section class="section section--code">
+			<div class="container">
+				<h2 class="section-title" data-aos="fade-right" data-aos-delay="2500">TO GATHER</h2>
+				<div class="secton-contents" data-aos="fade-left" data-aos-delay="2500">
+					<pre><code>해결이 안 되는 문제가 있다면 스스로 모임을 구성해보세요. 분명히 나와 같은 고민을 갖고 있는 사람이 있을거에요.</code></pre>
+				</div>
+        <h2 class="section-title" data-aos="fade-right" data-aos-delay="3000">BE TOGETHER</h2>
+        <div class="secton-contents" data-aos="fade-left" data-aos-delay="3000">
+          <pre><code>이미 나와 같은 고민을 하고 있었던 사람이 있지 않았을까요? 모임을 찾고 함께 문제에 대해 고민해봐요.</code></pre>
+        </div>
+			</div>
+		</section>
+
+
+
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<!-- <script src="http://localhost:3002/dist/aos.js"></script> -->
+
+		<script>
+			AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+			});
+		</script>
+
+
+	</body>
+</html>
