@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Post
+from .models import Post, Chat
 from django.views import View
 from .forms import PostForm
 
 # Create your views here.
 
+#to_gather view 관련
 def to_gather(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'website/to_gather.html', {'posts': posts})
@@ -40,3 +41,13 @@ def to_gather_list_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'website/to_gather_list_edit.html', {'form': form})
+
+
+#be_together view 관련
+def be_together(request):
+    chats = Chat.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'website/be_together.html', {'chats': chats})
+
+def be_together_list(request, pk):
+    chat = get_object_or_404(Chat, pk = pk)
+    return render(request, 'website/be_together_list.html', {'chat': chat})
