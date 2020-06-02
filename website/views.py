@@ -6,31 +6,35 @@ from .forms import PostForm
 
 # Create your views here.
 
+#main view 관련
+def main (request):
+    return render(request, 'website/main.html', {})
+
 #to_gather view 관련
 def to_gather(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'website/to_gather.html', {'posts': posts})
 
 def to_gather_list(request, pk):
-    post = get_object_or_404(Post, pk = pk)
+    post = get_object_or_404(Post, pk=pk)
     return render(request, 'website/to_gather_list.html', {'post': post})
 
-def to_gather_list_new(request):
+def to_gather_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
-        if form.is_valid():
-            post = form.save(commit=False)
+        if form.is_valid():    ## 잘못된 값이 저장되는 것을 방지하기 위해
+            post = form.save(commit = False)
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
             return redirect('to_gather_list', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'website/to_gather_list_edit.html', {'form': form})
+    return render(request, 'website/to_gather_edit.html', {'form': form}) # 새로운 글 만드는 view
 
-def to_gather_list_edit(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
+def to_gather_edit(request, pk):
+     post = get_object_or_404(Post, pk = pk)
+     if request.method == "POST":
         form = PostForm(instance=post)
         if form.is_valid():
             post = form.save(commit=False)
@@ -38,10 +42,9 @@ def to_gather_list_edit(request, pk):
             post.published_date = timezone.now()
             post.save()
             return redirect('to_gather_list', pk=post.pk)
-    else:
+     else:
         form = PostForm(instance=post)
-    return render(request, 'website/to_gather_list_edit.html', {'form': form})
-
+        return render(request, 'website/to_gather_edit.html', {'form': form})  # 글 수정하는 view
 
 #be_together view 관련
 def be_together(request):
