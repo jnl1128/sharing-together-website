@@ -3,16 +3,43 @@
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
+
     <title>TOGETHER</title>
 </head>
 
 <body>
+
 <header>
-      <div rel="main.html" class="div_logo"> <!--메인 페이지 html 삽입 예정-->
-        <p>TOGETHER</p> <!--사진으로 대체 가능 -->
-      </div>
-      <div class="div_header_bar"> <!--상단바에 대한 class입니다. 로그인 페이지 등 삽입 예정, 일단 비워 놨어요! -->
-        <p>header bar</p>
+  <div rel="main.html" class="div_logo">
+    <img src="/static/img/together-logo.png" width="150" height="80" align="left">
+  </div>
+
+  <div class="div_header_bar">
+  <ul id="main-menu">
+    <li><a href="main.html">ABOUT TOGETHER</a></li>
+    <li><a href="#">TO GATHER</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">submenu</a></li>
+
+      </ul>
+    </li>
+    <li><a href="#">BE TOGETHER</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">submenu</a></li>
+
+      </ul>
+    </li>
+    <li><a href="#">COME TOGETHER</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">submenu</a></li>
+
+      </ul>
+    </li>
+    <button class="button button2">SIGN UP</button>
+    <button class="button button1" >SIGN IN</button>
+
+
       </div>
     </header>
 
@@ -30,28 +57,18 @@
         <br style="font-size: 10px"></a>
       </div>
 
-      <div rel="" class="div_contents"> <!--category, chat list 들어갈 예정-->
+      <div rel="" class="div_contents">
         <div class="category" id="div_contents_category">
-          <h2>category</h2>
-          <ol>
-            <li>
-              {%block category_content%}
-              {%endblock%}
-            </li>
-          </ol>
-        <!--category 내용 삽입해주세요. 위 내용은 예시입니다. elements.html 이용해주시면 될 거 같아요. -->
+          {%block contents%}
+      
+          {%endblock%}
         </div>
 
-        <div class="chat_list" id="div_contents_chat_lists">
-
-          {%block list_content%}
-            {%block content_name%}
-            {%endblock%}
-          {%endblock%}
-         </div>
 
 
       </div>
 
+
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
