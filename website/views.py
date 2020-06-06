@@ -30,7 +30,7 @@ def to_gather_new(request):
             return redirect('to_gather_list', pk=post.pk)
     else:
         form = PostForm()
-    return render(request, 'website/to_gather_edit.html', {'form': form}) # 새로운 글 만드는 view
+        return render(request, 'website/to_gather_edit.html', {'form': form}) # 새로운 글 만드는 view
 
 def to_gather_edit(request, pk):
      post = get_object_or_404(Post, pk = pk)
