@@ -41,9 +41,8 @@ def to_gather_edit(request, pk):
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
-            return redirect('to_gather_list', pk=post.pk)
-        else:
-            messages.error(request, "Error")
+            return redirect('to_gather_list', pk=post.pk) 
+
     else:
         form = PostForm(instance=post)
     return render(request, 'website/to_gather_edit.html', {'form': form})  # 글 수정하는 view
