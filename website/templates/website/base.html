@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+
+
+
 
     <title>TOGETHER</title>
 </head>
@@ -30,7 +35,7 @@
 
       </ul>
     </li>
-    <li><a href="#">COME TOGETHER</a>
+    <li><a href="come_together.html">COME TOGETHER</a>
       <ul id="sub-menu">
         <li><a href="#" aria-label="subemnu">submenu</a></li>
 
@@ -58,17 +63,16 @@
       </div>
 
       <div rel="" class="div_contents">
-        <div class="category" id="div_contents_category">
           {%block contents%}
-      
+
           {%endblock%}
+
         </div>
 
 
-
-      </div>
 
 
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
+</html>
