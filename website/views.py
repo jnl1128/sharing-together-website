@@ -39,7 +39,6 @@ def to_gather_edit(request, pk):
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
-            post.published_date = timezone.now()
             post.save()
             return redirect('to_gather_list', pk=post.pk)
      else:
