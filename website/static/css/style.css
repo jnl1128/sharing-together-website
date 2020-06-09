@@ -50,6 +50,11 @@ a:hover { color: white; text-decoration: #003366;}
     border-radius: 5px;
 }
 
+/*post-form css*/
+.post-form textarea, .post-form input{
+    color: black;
+
+}
 /*contents-category css*/
 #div_contents_category{
     float: left;
