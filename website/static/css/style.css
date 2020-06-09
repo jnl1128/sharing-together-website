@@ -54,6 +54,23 @@ a:hover { color: white; text-decoration: #003366;}
     border-radius: 5px;
 }
 
+/*post-form css*/
+.post-form textarea, .post-form input{
+    color: black;
+
+}
+/*contents-category css*/
+#div_contents_category{
+    float: left;
+    text-align: center;
+    width: 200px;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 30px;
+    font-size: 15px;
+    background-color: #447e9b;
+    border-radius: 5px;
+}
 
 
 /*contents*/
@@ -70,8 +87,4 @@ a:hover { color: white; text-decoration: #003366;}
     font-size: 15px;
     background-color: #6cbdf3;
     border-radius: 5px;
-    position: fixed;
-    color: white;
-
-
 }

@@ -33,17 +33,20 @@ def to_gather_new(request):
     return render(request, 'website/to_gather_edit.html', {'form': form}) # 새로운 글 만드는 view
 
 def to_gather_edit(request, pk):
-     post = get_object_or_404(Post, pk = pk)
-     if request.method == "POST":
+    post = get_object_or_404(Post, pk = pk)
+    if request.method == "POST":
         form = PostForm(instance=post)
         if form.is_valid():
             post = form.save(commit=False)
             post.author = request.user
+            post.published_date = timezone.now()
             post.save()
             return redirect('to_gather_list', pk=post.pk)
-     else:
+        else:
+            messages.error(request, "Error")
+    else:
         form = PostForm(instance=post)
-        return render(request, 'website/to_gather_edit.html', {'form': form})  # 글 수정하는 view
+    return render(request, 'website/to_gather_edit.html', {'form': form})  # 글 수정하는 view
 
 #be_together view 관련
 def be_together(request):
