@@ -1,15 +1,6 @@
 /* 색 구분하려고 일단 background color 다르게 해 두었습니다 */
 /* body -> 전체적인 css */
 
-@keyframes fadein{
-  from {
-    opacity:0;
-  }
-  to {
-    opacity:1;
-  }
-}
-
 
 body {
   font-family: 'Malgun Gothic',Tahoma;
@@ -82,9 +73,5 @@ a:hover { color: white; text-decoration: #003366;}
     position: fixed;
     color: white;
 
-}
 
-.div_references
-{ font-size : 5vmin;
-  animation: fadein 2s;
 }

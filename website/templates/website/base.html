@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
-
-
-
+    {% block css %}
+    {% endblock %}
 
     <title>TOGETHER</title>
 </head>
@@ -43,28 +42,28 @@
 
       </ul>
     </li>
-    <button class="button button2">SIGN UP</button>
-    <button class="button button1" >SIGN IN</button>
+      <button class="button button2">SIGN UP</button>
+      <button class="button button1" >SIGN IN</button>
 
 
-      </div>
-    </header>
+        </div>
+      </header>
 
-    <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
-      <a href="main.html" id="menu_button_together">
-        <p>Together</p>
-        <br style="font-size: 10px">
-      </a>
-      <a href="to_gather.html" id="menu_button_to_gather">
-        <p>{%block menu_to_gather%}{%endblock%}</p>
-        <br style="font-size: 10px">
-      </a>
-      <a href="be_together.html" id="menu_button_be_together">
-        <p>{%block menu_be_together%}{%endblock%}</p>
-        <br style="font-size: 10px"></a>
-      </div>
+      <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
+        <a href="main.html" id="menu_button_together">
+          <p>Together</p>
+          <br style="font-size: 10px">
+        </a>
+        <a href="to_gather.html" id="menu_button_to_gather">
+          <p>{%block menu_to_gather%}{%endblock%}</p>
+          <br style="font-size: 10px">
+        </a>
+        <a href="be_together.html" id="menu_button_be_together">
+          <p>{%block menu_be_together%}{%endblock%}</p>
+          <br style="font-size: 10px"></a>
+        </div>
 
-      <div rel="" class="div_contents">
+        <div rel="" class="div_contents">
           {%block contents%}
 
           {%endblock%}
@@ -74,5 +73,5 @@
 
       <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-</body>
+    </body>
 </html>
