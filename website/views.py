@@ -54,3 +54,7 @@ def be_together(request):
 def be_together_list(request, pk):
     chat = get_object_or_404(Chat, pk = pk)
     return render(request, 'website/be_together_list.html', {'chat': chat})
+
+#come_together view 관련
+def come_together(request):
+    return render(request, 'website/come_together.html', {})    

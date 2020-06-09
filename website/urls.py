@@ -15,6 +15,7 @@ urlpatterns = [
     path('be_together/', views.be_together, name = 'be_together'),
     path('be_together/<int:pk>/', views.be_together_list, name = 'be_together_list'),
     path('main.html/', views.main, name = 'main'),
+    path('come_together.html/', views.come_together, name = 'come_together'),
 
 
 ]
