@@ -5,13 +5,7 @@ from . import views
 
 
 urlpatterns = [
-    path('to_gather/', views.to_gather, name = 'to_gather'),
-    path('to_gather/<int:pk>/', views.to_gather_list, name = 'to_gather_list'),
-    path('to_gather/new/', views.to_gather_new, name = 'to_gather_new'), # 새로운 글 쓰기 위함
-    path('to_gather/<int:pk>/edit/', views.to_gather_edit, name = 'to_gather_edit'), # 글 수정 위함
-    path('be_together/', views.be_together, name = 'be_together'),
-    path('be_together/<int:pk>/', views.be_together_list, name = 'be_together_list'),
-    path('main.html/', views.main, name = 'main'),
-
+    path('', views.post_list, name = 'post_list'),
+    path('post/<int:pk>/', views.post_detail, name = 'post_detail'),
 
 ]
