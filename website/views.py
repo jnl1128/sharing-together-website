@@ -13,7 +13,7 @@ def main (request):
 #to_gather view 관련
 def to_gather(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'website/post_list.html', {'posts': posts})
+    return render(request, 'website/to_gather.html', {'posts': posts})
 
 def to_gather_list(request, pk):
     post = get_object_or_404(Post, pk=pk)
