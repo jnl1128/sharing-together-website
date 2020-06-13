@@ -12,4 +12,7 @@ To gather
   {%for chat in chats %}
     <li><a href="{% url 'be_together_list' pk=chat.pk %}">{{chat.title}}</a></li>
   {%endfor%}
+  <div class = "list_header" >
+      <a href="{% url 'be_together_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
+  </div>
 {%endblock%}
