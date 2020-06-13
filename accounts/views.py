@@ -5,31 +5,31 @@ from django.contrib import auth
 
 # Create your views here.
 def signup(request):
-    if request.method == "POST":
-        if request.POST["password1"] == request.POST["password2"]:
+    if request.method == 'POST':
+        if request.POST['password1'] == request.POST['password2']:
             user = User.objects.create_user(
-                username=request.POST["username"], password=request.POST["password1"])
+                username=request.POST['username'], password=request.POST['password1'])
             auth.login(request, user)
-            return render(request, 'website/main.html')
+            return render(request, 'login.html')
         return render(request, 'signup.html')
 
     return render(request, 'signup.html')
 
 
 def login(request):
-    if request.method == "POST":
-        username = request.POST["username"]
-        password = request.POST["password"]
-        user = auth.authenticate(request, username = username, password = password)
+    if request.method == 'POST':
+        username = request.POST['username']
+        password = request.POST['password']
+        user = auth.authenticate(request, username=username, password=password)
         if user is not None:
             auth.login(request, user)
-            return redirect('website:main')
+            return redirect('main')
         else:
-            return render(request, 'login.html', {'error' : 'username or password is not correct'})
+            return render(request, 'login.html', {'error': 'username or password is not correct'})
     else:
         return render(request, 'login.html')
 
 
 def logout(request):
     auth.logout(request)
-    return redirect('website:main')
+    return redirect('login.html')
