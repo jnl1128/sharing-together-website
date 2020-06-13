@@ -5,54 +5,71 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown.css' %}">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+    {% block css %}
+    {% endblock %}
+
     <title>TOGETHER</title>
 </head>
 
 <body>
+
 <header>
-      <div rel="main.html" class="div_logo"> <!--메인 페이지 html 삽입 예정-->
-        <p>TOGETHER</p> <!--사진으로 대체 가능 -->
-      </div>
-      <div class="div_header_bar"> <!--상단바에 대한 class입니다. 로그인 페이지 등 삽입 예정, 일단 비워 놨어요! -->
-        <p>header bar</p>
-      </div>
-    </header>
+  <div rel="main.html" class="div_logo">
+    <img src="/static/img/together-logo.png" width="150" height="80" align="left">
+  </div>
 
-    <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
-      <a href="main.html" id="menu_button_together">
-        <p>Together</p>
-        <br style="font-size: 10px">
-      </a>
-      <a href="to_gather.html" id="menu_button_to_gather">
-        <p>{%block menu_to_gather%}{%endblock%}</p>
-        <br style="font-size: 10px">
-      </a>
-      <a href="be_together.html" id="menu_button_be_together">
-        <p>{%block menu_be_together%}{%endblock%}</p>
-        <br style="font-size: 10px"></a>
-      </div>
+  <div class="div_header_bar">
+  <ul id="main-menu">
+    <li><a href="main.html">ABOUT TOGETHER</a></li>
+    <li><a href="#">TO GATHER</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">submenu</a></li>
 
-      <div rel="" class="div_contents"> <!--category, chat list 들어갈 예정-->
-        <div class="category" id="div_contents_category">
-          <h2>category</h2>
-          <ol>
-              {%block category_content%}
-              {%endblock%}
-          </ol>
-        <!--category 내용 삽입해주세요. 위 내용은 예시입니다. elements.html 이용해주시면 될 거 같아요. -->
+      </ul>
+    </li>
+    <li><a href="{% url 'chat:be_together' %}">BE TOGETHER</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">submenu</a></li>
+
+      </ul>
+    </li>
+    <li><a href="come_together.html">COME TOGETHER</a>
+      <ul id="sub-menu">
+        <li><a href="#" aria-label="subemnu">submenu</a></li>
+
+      </ul>
+    </li>
+      <a class="button button2" href="{% url 'signup' %}">SIGN UP</a>
+      <a class="button button1" href="{% url 'login' %}">LOG IN</a>
+  </div>
+      </header>
+
+      <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
+        <a href="main.html" id="menu_button_together">
+          <p>Together</p>
+          <br style="font-size: 10px">
+        </a>
+        <a href="to_gather.html" id="menu_button_to_gather">
+          <p>{%block menu_to_gather%}{%endblock%}</p>
+          <br style="font-size: 10px">
+        </a>
+        <a href="{% url 'chat:be_together' %}" id="menu_button_be_together">
+          <p>{%block menu_be_together%}{%endblock%}</p>
+          <br style="font-size: 10px"></a>
         </div>
 
-        <div class="chat_list" id="div_contents_chat_lists">
+        <div rel="" class="div_contents">
+          {%block contents%}
 
-          {%block list_content%}
-            {%block content_name%}
-            {%endblock%}
           {%endblock%}
-         </div>
+
+        </div>
 
 
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-      </div>
-
-
-</body>
+    </body>
+</html>
