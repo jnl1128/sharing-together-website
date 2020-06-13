@@ -1,18 +1,19 @@
 /* 색 구분하려고 일단 background color 다르게 해 두었습니다 */
 /* body -> 전체적인 css */
 body{
-    color: white;
+    color: black;
 }
 
 /* h2 -> Category, Be Together text */
 h2{
     font-size: 30px;
+    color: black;
 }
 
 /* menu 란의 hyperlink css. 우선 흰색으로 출력되게 해 놓았습니다. */
-a:link { color: white; text-decoration: none;}
-a:visited { color: white; text-decoration: none;}
-a:hover { color: white; text-decoration: #003366;}
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: #003366;}
 
 /*logo css*/
 .div_logo{
@@ -51,7 +52,7 @@ a:hover { color: white; text-decoration: #003366;}
 }
 
 /*post-form css*/
-.post-form textarea, .post-form input{
+.post-form{
     color: black;
 
 }
