@@ -1,0 +1,23 @@
+
+@keyframes fadein{
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+}
+
+.div_contents
+{
+  background-color: #4B89DC;
+  border-color: #6cbdf3;
+  border-width: thin;
+  border-style : solid;
+
+}
+
+.div_references
+{ font-size : 5vmin;
+  animation: fadein 2s;
+}

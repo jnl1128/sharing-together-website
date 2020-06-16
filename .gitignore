@@ -5,7 +5,15 @@
 *.log
 *.pot
 *.pyc
+*~
+.idea
+d.sqlite3
+db.sqlite3
+db_test_.sqlite3
+dump.rdb
 __pycache__/
+myvenv
+__init__
 local_settings.py
 db.sqlite3
 db.sqlite3-journal

@@ -1,0 +1,23 @@
+{%extends 'website/base.html'%}
+
+{%block menu_to_gather%}
+<strong><u>To gather</u></strong>
+{%endblock%}
+
+
+{%block menu_be_together%}
+Be together
+{%endblock%}
+
+{%block contents%}
+<div id = "div_contents_category">
+  {%for post in posts %}
+    <li><a href="{% url 'to_gather_list' pk=post.pk %}">{{post.title}}</a></li>
+  {%endfor%}
+
+  <div class = "list_header" >
+      <a href="{% url 'to_gather_new' %}"><span class="glyphicon glyphicon-plus"></span></a>
+    </div>
+</div>
+
+{%endblock%}

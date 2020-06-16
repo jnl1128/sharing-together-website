@@ -50,7 +50,7 @@
   </header>
 
       <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
-        <a href="main.html" id="menu_button_together">
+        <a href="{% url 'main' %}" id="menu_button_together">
 
           <br style="font-size: 10px">
         </a>
@@ -66,8 +66,8 @@
     </div>
     <div class="div_header_bar">
         <ul id="main-menu">
-            <li><a href="main.html">ABOUT TOGETHER</a></li>
-            <li><a href="#">TO GATHER</a>
+            <li><a href="{% url 'main' %}">ABOUT TOGETHER</a></li>
+            <li><a href="{% url 'to_gather' %}">TO GATHER</a>
                 <ul id="sub-menu">
                     <li><a href="#" aria-label="subemnu">submenu</a></li>
                 </ul>
@@ -87,7 +87,7 @@
                 <a href="{% url 'logout' %}" class="button">LOG OUT</a>
             {% else %}
                 <a href="{% url 'signup' %}" class="button">SIGN UP</a>
-                <a href="{%url 'login' %}" class="button"> LOG IN</a>
+                <a href="{% url 'login' %}" class="button"> LOG IN</a>
             {% endif %}
     </div>
 
