@@ -1,18 +1,22 @@
+{% extends 'website/base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8"/>
-    <title>TOGETHER</title>
-    <style rel="stylesheet" href="{% static "css/main.css" %}"></style>
-    <style rel="stylesheet" href="{% static "css/room.css" %}"></style>
-</head>
 
-<body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
-    <input id="chat-message-input" type="text" size="100"/><br/>
-    <input id="chat-message-submit" type="button" value="Send"/>
-</body>
+{% block css %}
+    <style rel="stylesheet" href="{% static "css/room.css" %}"></style>
+{% endblock %}
+
+{% block menu_be_together %}
+{% endblock %}
+
+{% block contents %}
+    <h1>{{ room_name_json }} 채팅방</h1>
+    <br>
+    <textarea id="chat-log" cols="100" rows="20"></textarea>
+    <br><br><br>
+    <input id="chat-message-input" type="text" size="90" style="margin-left: 10%">
+    <input class="button" id="chat-message-submit" type="button" value="Send"
+           style="margin-right: 15%; margin-left: -5%; margin-top: -0.5%">
+
 
 <script>
     var roomName = {{ room_name_json }};
@@ -48,5 +52,4 @@
         messageInputDom.value = '';
     };
 </script>
-
-</html>
+{% endblock %}

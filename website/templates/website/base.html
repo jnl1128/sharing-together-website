@@ -85,12 +85,9 @@
                 <a href="" class="button"> {{user.username}}</a>
                 <a href="{% url 'logout' %}" class="button">LOG OUT</a>
             {% else %}
-                <a href="{%url 'login' %}" class="button"> LOG IN</a>
                 <a href="{% url 'signup' %}" class="button">SIGN UP</a>
+                <a href="{%url 'login' %}" class="button"> LOG IN</a>
             {% endif %}
-<!--
-            <a class="button" href="{% url 'signup' %}">SIGN UP</a>
-            <a class="button" href="{% url 'login' %}">LOG IN</a> -->
     </div>
 
   <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
