@@ -1,0 +1,15 @@
+{%extends 'website/base.html'%}
+
+{%block menu_to_gather%}
+To gather
+{%endblock%}
+
+{%block menu_be_together%}
+<b>Be together</b>
+{%endblock%}
+
+{%block category_content%}
+  {%for chat in chats %}
+    <li><a href="{% url 'be_together_list' pk=chat.pk %}">{{chat.title}}</a></li>
+  {%endfor%}
+{%endblock%}
