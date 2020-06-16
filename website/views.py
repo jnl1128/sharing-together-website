@@ -59,4 +59,4 @@ def be_together_list(request, pk):
 
 #come_together view 관련
 def come_together(request):
-    return render(request, 'website/come_together.html', {})    
+    return render(request, 'website/come_together.html', {})
