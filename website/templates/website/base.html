@@ -43,12 +43,9 @@
                 <a href="" class="button"> {{user.username}}</a>
                 <a href="{% url 'logout' %}" class="button">LOG OUT</a>
             {% else %}
-                <a href="{%url 'login' %}" class="button"> LOG IN</a>
                 <a href="{% url 'signup' %}" class="button">SIGN UP</a>
+                <a href="{%url 'login' %}" class="button"> LOG IN</a>
             {% endif %}
-<!--
-            <a class="button" href="{% url 'signup' %}">SIGN UP</a>
-            <a class="button" href="{% url 'login' %}">LOG IN</a> -->
     </div>
 </header>
 
