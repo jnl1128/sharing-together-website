@@ -1,9 +1,11 @@
 {% extends 'website/base.html' %}
 
 {% block contents %}
+<h1 style="margin-left: 7%">Good Bye!</h1>
+<br>
 <div class="container">
-    <h1>LOG IN</h1>
-
+    <h2>다른 계정으로 로그인 하기</h2>
+    <br>
     <form method="POST" action="{% url 'login' %}">
         {% csrf_token %}
         USERNAME:

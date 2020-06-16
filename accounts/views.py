@@ -32,4 +32,4 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    return redirect('login.html')
+    return render(request, 'after_logout.html')

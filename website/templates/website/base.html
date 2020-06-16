@@ -1,4 +1,5 @@
 {% load static %}
+
 <html>
   <head>
     <meta charset="UTF-8">
@@ -17,49 +18,53 @@
 <body>
 
 <header>
-  <div rel="main.html" class="div_logo">
-    <img src="/static/img/together-logo.png" width="150" height="80" align="left">
-  </div>
+    <div rel="main.html" class="div_logo">
+        <img src="/static/img/together-logo.png" width="150" height="80" align="left">
+    </div>
+    <div class="div_header_bar">
+        <ul id="main-menu">
+            <li><a href="main.html">ABOUT TOGETHER</a></li>
+            <li><a href="#">TO GATHER</a>
+                <ul id="sub-menu">
+                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                </ul>
+            </li>
+            <li><a href="{% url 'chat:be_together' %}">BE TOGETHER</a>
+                <ul id="sub-menu">
+                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                </ul>
+            </li>
+            <li><a href="come_together.html">COME TOGETHER</a>
+                <ul id="sub-menu">
+                    <li><a href="#" aria-label="subemnu">submenu</a></li>
+                </ul>
+            </li>
+            {% if user.is_active %}
+                <a href="" class="button"> {{user.username}}</a>
+                <a href="{% url 'logout' %}" class="button">LOG OUT</a>
+            {% else %}
+                <a href="{%url 'login' %}" class="button"> LOG IN</a>
+                <a href="{% url 'signup' %}" class="button">SIGN UP</a>
+            {% endif %}
+<!--
+            <a class="button" href="{% url 'signup' %}">SIGN UP</a>
+            <a class="button" href="{% url 'login' %}">LOG IN</a> -->
+    </div>
+</header>
 
-  <div class="div_header_bar">
-  <ul id="main-menu">
-    <li><a href="main.html">ABOUT TOGETHER</a></li>
-    <li><a href="#">TO GATHER</a>
-      <ul id="sub-menu">
-        <li><a href="#" aria-label="subemnu">submenu</a></li>
-
-      </ul>
-    </li>
-    <li><a href="{% url 'chat:be_together' %}">BE TOGETHER</a>
-      <ul id="sub-menu">
-        <li><a href="#" aria-label="subemnu">submenu</a></li>
-
-      </ul>
-    </li>
-    <li><a href="come_together.html">COME TOGETHER</a>
-      <ul id="sub-menu">
-        <li><a href="#" aria-label="subemnu">submenu</a></li>
-
-      </ul>
-    </li>
-      <a class="button button2" href="{% url 'signup' %}">SIGN UP</a>
-      <a class="button button1" href="{% url 'login' %}">LOG IN</a>
-  </div>
-      </header>
-
-      <div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
-        <a href="main.html" id="menu_button_together">
-          <p>Together</p>
-          <br style="font-size: 10px">
-        </a>
-        <a href="to_gather.html" id="menu_button_to_gather">
-          <p>{%block menu_to_gather%}{%endblock%}</p>
-          <br style="font-size: 10px">
-        </a>
-        <a href="{% url 'chat:be_together' %}" id="menu_button_be_together">
-          <p>{%block menu_be_together%}{%endblock%}</p>
-          <br style="font-size: 10px"></a>
-        </div>
+<div class="div_menu"> <!--menu에 대한 class입니다. 현재 페이지 뷰에 맞게 bold 처리만 해주세요. -->
+    <a href="main.html" id="menu_button_together">
+        <p>{%block main_together%}{%endblock%}</p>
+        <br style="font-size: 10px">
+    </a>
+    <a href="to_gather.html" id="menu_button_to_gather">
+        <p>{%block menu_to_gather%}{%endblock%}</p>
+        <br style="font-size: 10px">
+    </a>
+    <a href="{% url 'chat:be_together' %}" id="menu_button_be_together">
+        <p>{%block menu_be_together%}{%endblock%}</p>
+        <br style="font-size: 10px"></a>
+</div>
 
         <div rel="" class="div_contents">
           {%block contents%}

@@ -1,7 +1,8 @@
 {% extends 'website/base.html' %}
+
 {% block contents %}
 <div class="container">
-    <h1>Sign up!</h1>
+    <h1>SIGN UP!</h1>
 
     <form method="POST" action="{% url 'signup' %}">
         {% csrf_token %}
@@ -17,7 +18,7 @@
         <br>
         <input name="password2" type="password">
         <br><br>
-        <input type="submit" class="button" value="sign up">
+        <input type="submit" class="button" value="SIGN UP" style="margin-right: 47%;">
     </form>
 </div>
 {% endblock %}
