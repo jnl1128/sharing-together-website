@@ -5,8 +5,6 @@ from . import views
 
 
 urlpatterns = [
-    path('', views.to_gather, name = 'post_list'),
-    path('post/<int:pk>/', views.to_gather_list, name = 'post_detail'),
 
     path('to_gather/', views.to_gather, name = 'to_gather'),
     path('to_gather/<int:pk>/', views.to_gather_list, name = 'to_gather_list'),
