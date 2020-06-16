@@ -1,14 +1,8 @@
 from django import forms
-from .models import Post,Chat
+from .models import Post
 
 class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text',)
-
-class ChatForm(forms.ModelForm):
-
-    class Meta:
-        model = Chat
         fields = ('title', 'text',)

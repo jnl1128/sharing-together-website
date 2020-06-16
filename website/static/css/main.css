@@ -1,3 +1,4 @@
+
 body {
   font-family: sans-serif ,Tahoma;
   margin: 0;
@@ -5,7 +6,8 @@ body {
   overflow-x: hidden;
 }
 
-h2 {font-family: san-sserif, Tahoma; font-size:4vmin;}
+h2 {
+  font-family: san-sserif, Tahoma, sans-serif; font-size:4vmin;}
 
 *,
 *:before,
