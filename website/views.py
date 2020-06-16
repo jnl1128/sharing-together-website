@@ -1,8 +1,9 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from .models import Post, Chat
+from .models import Post
 from django.views import View
 from .forms import PostForm
+from django.http import HttpResponseRedirect
 
 
 # Create your views here.
@@ -42,32 +43,15 @@ def to_gather_edit(request, pk):
     if request.method == "POST":
         form = PostForm(instance=post)
         if form.is_valid():
-            post = form.save(commit=False)
+            post = form.save(commit = False)
             post.author = request.user
             post.published_date = timezone.now()
             post.save()
             return redirect('to_gather_list', pk=post.pk)
-        else:
-            messages.error(request, "Error")
+
     else:
         form = PostForm(instance=post)
     return render(request, 'website/to_gather_edit.html', {'form': form})  # 글 수정하는 view
-
-
-# be_together view 관련
-def be_together(request):
-    chats = Chat.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'website/be_together.html', {'chats': chats})
-
-
-def be_together_list(request, pk):
-    chat = get_object_or_404(Chat, pk=pk)
-    return render(request, 'website/be_together_list.html', {'chat': chat})
-
-
-# come_together view 관련
-def come_together(request):
-    return render(request, 'website/come_together.html', {})
 
 
 # come_together view 관련
