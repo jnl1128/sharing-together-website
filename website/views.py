@@ -13,7 +13,7 @@ def main (request):
 #to_gather view 관련
 def to_gather(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'website/post_list.html', {'posts': posts})
+    return render(request, 'website/to_gather.html', {'posts': posts})
 
 def to_gather_list(request, pk):
     post = get_object_or_404(Post, pk=pk)
@@ -56,7 +56,10 @@ def be_together(request):
 def be_together_list(request, pk):
     chat = get_object_or_404(Chat, pk = pk)
     return render(request, 'website/be_together_list.html', {'chat': chat})
+<<<<<<< HEAD
 
 #come_together view 관련
 def come_together(request):
     return render(request, 'website/come_together.html', {})
+=======
+>>>>>>> 018085d029587d6d3cec5b058f207b04a13a9864
