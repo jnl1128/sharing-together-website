@@ -1,24 +1,16 @@
 {%extends 'website/base.html'%}
 
 {%block menu_to_gather%}
-<b>To gather</b>
+<strong><u>To gather</u></strong>
 {%endblock%}
 
 {%block menu_be_together%}
 Be together
 {%endblock%}
 
-{%block category_content%}
-  {%for post in posts %}
-    <li>{{post.title}}</li>
-  {%endfor%}
-{%endblock%}
-
-{%block list_content%}
-  {%block content_name%}
+{%block contents%}
   <h2>To gather</h2>
-  {%endblock%}
-
+  
   <table style="margin-left: 10px;">
   <thead style="margin-left: 20px;">
     <tr>
