@@ -3,6 +3,7 @@ from django.utils import timezone
 from .models import Post, Chat
 from django.views import View
 from .forms import PostForm, ChatForm
+from django.http import HttpResponseRedirect
 
 # Create your views here.
 
