@@ -1,0 +1,22 @@
+#chat-log{
+    width: 60%;
+    height: 80%;
+    border: #3875d7;
+    border: 5px;
+    border-radius: 8px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#chat-message-input{
+    width: 50%;
+    height: 3%;
+    border: #3875d7;
+    margin-left: 20%;
+}
+
+#chat-message-submit{
+    width: 5%;
+    margin-left: 5%;
+    border: #3875d7;
+}
