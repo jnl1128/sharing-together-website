@@ -16,6 +16,9 @@ h1 {
     font-size: 40px;
     background-color: #6cbdf3;
     position:fixed;
+    font-size: 4vmin;
+    background-color: #6cbdf3;
+    position:fixed;
 }
 
 
@@ -34,11 +37,13 @@ ul, li {
 
 #main-menu > li > a {
   font-size: 0.85rem;
+  font-size: 1.5rem;
   text-align: center;
   text-decoration: none;
   letter-spacing: 0.05em;
   display: block;
   padding:15px 12px;
+  padding:12px 12px;
   text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 }
 
