@@ -1,57 +1,61 @@
 /* 색 구분하려고 일단 background color 다르게 해 두었습니다 */
 /* body -> 전체적인 css */
-body{
-    color: white;
+
+
+body {
+  font-family: 'Malgun Gothic',Tahoma;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #fff;
+  opacity : 0.8;
 }
+
+
+
+
+
+
+
 
 /* h2 -> Category, Be Together text */
-h2{
-    font-size: 30px;
-}
+
 
 /* menu 란의 hyperlink css. 우선 흰색으로 출력되게 해 놓았습니다. */
-a:link { color: black; text-decoration: none;}
-a:visited { color: black; text-decoration: none;}
-a:hover { color: black; text-decoration: #003366;}
+a:link { color: white; text-decoration: none;}
+a:visited { color: white; text-decoration: none;}
+a:hover { color: white; text-decoration: #003366;}
 
 /*logo css*/
+
+
 .div_logo{
     float: left;
     text-align: center;
-    width: 300px;
-    height: 100px;
+    width: 200px;
+    height: 50px;
     margin-top: 20px;
-    margin-left: 25px;
+    margin-left: 45px;
     font-size: 45px;
-    background-color: #3875d7;
+    position:fixed;
 }
 
-/*header_bar css*/
-.div_header_bar{
-    float: left;
-    text-align: center;
-    width: 1050px;
-    height: 100px;
-    margin-top: 20px;
-    margin-left: 30px;
-    font-size: 45px;
-    background-color: #205067;
-}
 /*menu css*/
 .div_menu{
     float: left;
     text-align: center;
-    width: 300px;
+    width: 200px;
     height: 400px;
-    margin-top: 50px;
-    margin-left: 25px;
+    margin-top: 120px;
+    margin-left: 20;
+    position: fixed;
     font-size: 30px;
-    background-color: #5b80b2;
+    background-color: #6cbdf3;
     border-radius: 5px;
 }
 
 /*post-form css*/
-.post-form{
+.post-form textarea, .post-form input{
     color: black;
 
 }
@@ -68,18 +72,19 @@ a:hover { color: black; text-decoration: #003366;}
     border-radius: 5px;
 }
 
-/*contents-chat_list css*/
-#div_contents_chat_lists{
+
+/*contents*/
+
+.div_contents
+{
     float: left;
     text-align: center;
     align-content: center;
-    width: 800px;
-    height: 400px;
-    margin-top: 50px;
-    margin-left: 50px;
+    width: 1100px;
+    height: 800px;
+    margin-top: 120px;
+    margin-left: 250px;
     font-size: 15px;
-    background-color: #003366;
+    background-color: #6cbdf3;
     border-radius: 5px;
-    position: absolute;
-
 }
